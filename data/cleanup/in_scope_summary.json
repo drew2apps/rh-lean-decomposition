@@ -1,0 +1,14 @@
+{
+  "identical_statement_and_proof": {
+    "redundant_copies": 30395,
+    "copies_with_twin_already_in_scope": 6393,
+    "lines": 51325,
+    "same_file": 258
+  },
+  "identical_statement_any_proof": {
+    "redundant_copies": 79306,
+    "copies_with_twin_already_in_scope": 53323,
+    "lines": 261402,
+    "same_file": 1703
+  }
+}

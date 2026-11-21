@@ -1,0 +1,4 @@
+module,name,start_line,lines,mathlib_module,mathlib_name
+Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsQuasiFinitePolynomialMap,sum_r_mul_ne,141,8,RingTheory.NoetherNormalization,sum_r_mul_ne
+Formalism.LocalToGlobal.SiegelLatticeTheory.CasimirVolumeRatios.AdeleLC,dense_algebraMap,66,9,RingTheory.DedekindDomain.AdicValuation,denseRange_algebraMap
+GroundTheory.AutomorphicForms.GKModules.LieAlgebra,exp_units_conj_real,17,3,Analysis.Normed.Algebra.Exponential,exp_units_conj

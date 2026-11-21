@@ -1,0 +1,142 @@
+{
+  "examples": {
+    "count": 4659,
+    "lines": 17466,
+    "modules": 2254
+  },
+  "identical_statement_and_proof": {
+    "groups": 23272,
+    "declarations": 53667,
+    "redundant_copies": 30395,
+    "redundant_lines": 235097,
+    "largest_group": 34,
+    "groups_spanning_modules": 23048
+  },
+  "identical_statement_and_proof_same_variable_context": {
+    "groups": 9675,
+    "declarations": 21066,
+    "redundant_copies": 11391,
+    "redundant_lines": 110957,
+    "largest_group": 15,
+    "groups_spanning_modules": 9564
+  },
+  "identical_statement_any_proof": {
+    "groups": 67180,
+    "declarations": 146486,
+    "redundant_copies": 79306,
+    "redundant_lines": 499362,
+    "largest_group": 140,
+    "groups_spanning_modules": 65730
+  },
+  "theorems_whose_proof_is_one_name": {
+    "count": 32557,
+    "lines": 60846,
+    "same_statement_as_target": 5461
+  },
+  "unreferenced_theorems": {
+    "count": 40347,
+    "lines": 483146,
+    "rounds": [
+      18349,
+      7391,
+      4443,
+      2872,
+      1893,
+      1247,
+      923,
+      706,
+      541,
+      407,
+      316,
+      247,
+      197,
+      139,
+      105,
+      83,
+      57,
+      61,
+      42,
+      65,
+      50,
+      41,
+      28,
+      36,
+      21,
+      18,
+      11,
+      12,
+      9,
+      10,
+      7,
+      6,
+      6,
+      4,
+      4
+    ],
+    "private": 620,
+    "candidates_considered": 809150,
+    "by_top_folder": {
+      "Formalism": 18900,
+      "Development": 17042,
+      "GroundTheory": 3046,
+      "ReciprocityTheory": 1103,
+      "CompanionTheory": 172,
+      "PositivityTheory": 84
+    }
+  },
+  "modules_with_nothing_referenced": {
+    "count": 2078,
+    "lines": 58137
+  },
+  "identical_modules_same_names_and_namespace": {
+    "groups": 17,
+    "modules": 40,
+    "redundant_modules": 23,
+    "redundant_lines": 1392,
+    "largest_group": 4
+  },
+  "identical_modules_ignoring_namespace": {
+    "groups": 309,
+    "modules": 673,
+    "redundant_modules": 364,
+    "redundant_lines": 37145,
+    "largest_group": 4
+  },
+  "search_tactics_in_source": {
+    "exact?": 0,
+    "apply?": 0,
+    "rw?": 0,
+    "simp?": 0,
+    "aesop?": 0,
+    "hint": 21355,
+    "library_search": 0
+  },
+  "imports": {
+    "project_import_edges": 753261,
+    "implied_by_another_import": 367050,
+    "share": 0.4873,
+    "modules_affected": 110473,
+    "median_modules_needed_by_a_module": 720,
+    "mean_modules_needed_by_a_module": 3116.3
+  },
+  "statement_text_identical_to_a_Mathlib_theorem": {
+    "project_theorems": 3,
+    "lines": 20,
+    "distinct_mathlib_statements": 3,
+    "also_same_short_name": 1
+  },
+  "removable_without_touching_any_used_declaration": {
+    "example_lines": 17466,
+    "unreferenced_theorem_lines": 483146,
+    "redundant_import_lines": 367050,
+    "repeated_import_lines": 308,
+    "total_lines": 867970,
+    "share_of_all_lines": 0.0495
+  },
+  "totals": {
+    "lines": 17549402,
+    "declarations": 1063626,
+    "theorems": 816822,
+    "theorem_lines": 12199011
+  }
+}

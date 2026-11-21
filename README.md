@@ -90,6 +90,16 @@ from a compiled environment or the kernel export.
   shims: removing one means pointing its importers at what it re-exports.
 - **308 import lines are exact repeats** within the same file.
 
+## 5. Cleanup ledger
+
+[CLEANUP.md](CLEANUP.md) measures what could be removed or merged, from the source text of all 1,063,626 top-level declarations:
+
+- **867,970 lines (4.9%) are removable without touching anything that is used**: 40,347 theorems never referenced by name, 367,050 imports already implied by another import in the same file, and 4,659 `example` blocks.
+- **30,395 declarations are exact copies of another one** (235,097 lines). For 6,393 of them the identical twin is already imported at that point.
+- The removals were applied to 170 modules in a scratch copy and built with the pinned toolchain: 170 compiled, 0 errors.
+
+These are text-level counts and lower bounds; CLEANUP.md states what each one does and does not establish.
+
 ## Files
 
 | File | Contents |
@@ -99,6 +109,7 @@ from a compiled environment or the kernel export.
 | `data/folders.csv` | Every folder with 10+ modules: size, outside modules needed, self-contained flag, outside importers, import-only count |
 | `data/modules.csv.gz` | One row per module: lines, depth, import counts, immediate dominator, top-level component |
 | `data/modules.tsv.gz` | Raw extraction: per-module sizes and import lists |
+| `data/cleanup/` | Cleanup ledger data; see CLEANUP.md |
 
 ## Reproduce
 

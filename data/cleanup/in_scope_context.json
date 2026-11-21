@@ -1,0 +1,20 @@
+{
+  "full": {
+    "in_scope": 6393,
+    "twin_has_same_variable_context": 2592,
+    "lines_same_context": 28584,
+    "of_which_proof_is_one_name": 209,
+    "one_name_lines": 335,
+    "twin_has_same_namespace_and_context": 1945,
+    "lines_same_namespace_and_context": 22955
+  },
+  "stmt": {
+    "in_scope": 53323,
+    "twin_has_same_variable_context": 30863,
+    "lines_same_context": 147616,
+    "of_which_proof_is_one_name": 3109,
+    "one_name_lines": 6571,
+    "twin_has_same_namespace_and_context": 6038,
+    "lines_same_namespace_and_context": 43960
+  }
+}
