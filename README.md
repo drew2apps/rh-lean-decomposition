@@ -101,6 +101,25 @@ from a compiled environment or the kernel export.
 
 These are text-level counts and lower bounds; CLEANUP.md states what each one does and does not establish.
 
+## 6. Splitting into separate projects
+
+Andrii Kurdiumov asked in the Zulip thread whether parts of the tree could become separate Lean projects, so that they can be built and checked alone. `split.py` tests two ways of cutting.
+
+**Along folders: not without moving files.** At every folder depth, one knot of mutually dependent folders holds 98–100% of the modules, and folders in a knot cannot be separate projects.
+
+| Folder depth | Folders | Folders free of cycles | Modules in them | Largest knot |
+|---:|---:|---:|---:|---|
+| 1 | 11 | 4 | 10 | 7 folders, 175,177 modules (100.0%) |
+| 2 | 331 | 226 | 1,710 | 99 folders, 173,435 modules (99.0%) |
+| 3 | 747 | 276 | 1,641 | 400 folders, 172,822 modules (98.7%) |
+| 4 | 2,009 | 331 | 1,583 | 1,583 folders, 172,517 modules (98.5%) |
+| 5 | 2,579 | 369 | 1,811 | 2,105 folders, 171,947 modules (98.2%) |
+| 6 | 3,068 | 383 | 1,879 | 2,575 folders, 171,892 modules (98.1%) |
+
+**Along single-entry components: yes.** Treating each of the 135 components of 100 or more modules (75,318 modules, 43.0% of the tree) as one unit leaves the import graph acyclic, so each could be its own project. What a component needs from outside varies widely: the median is 6,316 modules, 62 need fewer than 5,000, 116 need fewer than 20,000, and the largest need most of the tree. `data/split/packages.csv` lists each component with its size and what it needs.
+
+This is at the level of module imports. A real split also has to decide where the remaining shared modules live.
+
 ## Files
 
 | File | Contents |
@@ -111,6 +130,7 @@ These are text-level counts and lower bounds; CLEANUP.md states what each one do
 | `data/modules.csv.gz` | One row per module: lines, depth, import counts, immediate dominator, top-level component |
 | `data/modules.tsv.gz` | Raw extraction: per-module sizes and import lists |
 | `data/cleanup/` | Cleanup ledger data; see CLEANUP.md |
+| `data/split/` | Folder knots and the components that can be separate projects (`split.py`) |
 
 ## Reproduce
 

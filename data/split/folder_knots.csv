@@ -1,0 +1,7 @@
+folder_depth,folders,folders_free_of_cycles,modules_in_those_folders,largest_knot_folders,largest_knot_modules,largest_knot_share
+1,11,4,10,7,175177,0.9999
+2,331,226,1710,99,173435,0.99
+3,747,276,1641,400,172822,0.9865
+4,2009,331,1583,1583,172517,0.9848
+5,2579,369,1811,2105,171947,0.9815
+6,3068,383,1879,2575,171892,0.9812

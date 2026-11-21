@@ -1,0 +1,66 @@
+{
+  "modules": 175187,
+  "components_of_100_or_more": 135,
+  "modules_in_them": 75318,
+  "contracted_graph_nodes": 100004,
+  "contracted_graph_is_acyclic": true,
+  "median_outside_modules_needed": 6316,
+  "needing_under_5000": 62,
+  "needing_under_20000": 116,
+  "folder_knots": [
+    {
+      "folder_depth": 1,
+      "folders": 11,
+      "folders_free_of_cycles": 4,
+      "modules_in_those_folders": 10,
+      "largest_knot_folders": 7,
+      "largest_knot_modules": 175177,
+      "largest_knot_share": 0.9999
+    },
+    {
+      "folder_depth": 2,
+      "folders": 331,
+      "folders_free_of_cycles": 226,
+      "modules_in_those_folders": 1710,
+      "largest_knot_folders": 99,
+      "largest_knot_modules": 173435,
+      "largest_knot_share": 0.99
+    },
+    {
+      "folder_depth": 3,
+      "folders": 747,
+      "folders_free_of_cycles": 276,
+      "modules_in_those_folders": 1641,
+      "largest_knot_folders": 400,
+      "largest_knot_modules": 172822,
+      "largest_knot_share": 0.9865
+    },
+    {
+      "folder_depth": 4,
+      "folders": 2009,
+      "folders_free_of_cycles": 331,
+      "modules_in_those_folders": 1583,
+      "largest_knot_folders": 1583,
+      "largest_knot_modules": 172517,
+      "largest_knot_share": 0.9848
+    },
+    {
+      "folder_depth": 5,
+      "folders": 2579,
+      "folders_free_of_cycles": 369,
+      "modules_in_those_folders": 1811,
+      "largest_knot_folders": 2105,
+      "largest_knot_modules": 171947,
+      "largest_knot_share": 0.9815
+    },
+    {
+      "folder_depth": 6,
+      "folders": 3068,
+      "folders_free_of_cycles": 383,
+      "modules_in_those_folders": 1879,
+      "largest_knot_folders": 2575,
+      "largest_knot_modules": 171892,
+      "largest_knot_share": 0.9812
+    }
+  ]
+}
