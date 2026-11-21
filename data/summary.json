@@ -1,0 +1,201 @@
+{
+  "modules": 175187,
+  "project_import_edges": 753261,
+  "lines": 17549402,
+  "theorems": 818755,
+  "definitions": 242069,
+  "root": "Main",
+  "reachable_from_root": 175187,
+  "max_import_depth": 202,
+  "hub": "Supplements.Kernels.MainTheoremsAll",
+  "hub_dominates": 175185,
+  "top_level_components": 47060,
+  "top_level_by_size": {
+    "1000+": {
+      "components": 7,
+      "modules": 44980,
+      "lines": 3569054
+    },
+    "1": {
+      "components": 37001,
+      "modules": 37001,
+      "lines": 5148552
+    },
+    "100-999": {
+      "components": 128,
+      "modules": 30338,
+      "lines": 2613644
+    },
+    "2-9": {
+      "components": 8460,
+      "modules": 26830,
+      "lines": 3135751
+    },
+    "10-99": {
+      "components": 1464,
+      "modules": 36035,
+      "lines": 3082368
+    }
+  },
+  "modules_with_no_project_imports": 5927,
+  "lines_in_modules_with_no_project_imports": 621098,
+  "import_only_modules": 150,
+  "modules_importing_whole_Mathlib": 136003,
+  "modules_by_import_depth": {
+    "0": 5927,
+    "1-5": 18991,
+    "6-20": 29833,
+    "21-50": 50296,
+    "51-100": 56683,
+    "101+": 13457
+  },
+  "most_imported_modules": [
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone",
+      "direct_importers": 3088
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian",
+      "direct_importers": 2972
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique",
+      "direct_importers": 2518
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms\u2082.ExistsNormLeHeightPow",
+      "direct_importers": 2426
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion",
+      "direct_importers": 2390
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.UnifUniqSt",
+      "direct_importers": 2284
+    },
+    {
+      "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.CohomologicalCsdTempered",
+      "direct_importers": 2242
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf",
+      "direct_importers": 1838
+    },
+    {
+      "module": "Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn",
+      "direct_importers": 1653
+    },
+    {
+      "module": "ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.HeckeKer",
+      "direct_importers": 1429
+    }
+  ],
+  "self_contained_folders": 23,
+  "maximal_self_contained_folders": 22,
+  "modules_in_maximal_self_contained_folders": 470,
+  "largest_components": [
+    {
+      "entry": "Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.IntegralStructures.RowSrc",
+      "modules": 13055,
+      "lines": 1006316
+    },
+    {
+      "entry": "Development.AutomorphicArithmetic.CharacterBoxes.RiemannHypothesisOfEveryCharacter",
+      "modules": 10065,
+      "lines": 738613
+    },
+    {
+      "entry": "Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.ThresholdArguments.DenseThresholdCases.TopMainZj",
+      "modules": 8050,
+      "lines": 776910
+    },
+    {
+      "entry": "Development.WeilBound.CoreStatements.AutomorphicKernels.MoriwakiBigness.HilbertSamuelApplications.TopCovolSlim2Use",
+      "modules": 6076,
+      "lines": 529551
+    },
+    {
+      "entry": "Supplements.Kernels.MainTheoremsCritical",
+      "modules": 4482,
+      "lines": 292914
+    },
+    {
+      "entry": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalCompactificationFanLogKodairaSpencerIso",
+      "modules": 1942,
+      "lines": 124322
+    },
+    {
+      "entry": "Development.AbelianVarietyTheory.Proofs.SatakeParameters.ReciprocityKernelService",
+      "modules": 1310,
+      "lines": 100428
+    },
+    {
+      "entry": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelToroidalIntegralHolds",
+      "modules": 924,
+      "lines": 55301
+    },
+    {
+      "entry": "Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithHilbertSamuelOfPrincipalisation",
+      "modules": 702,
+      "lines": 35503
+    },
+    {
+      "entry": "Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.Conclusion41OfHyp",
+      "modules": 678,
+      "lines": 42775
+    }
+  ],
+  "largest_self_contained_folders": [
+    {
+      "folder": "GroundTheory.TateCohomology",
+      "modules": 56,
+      "lines": 8811
+    },
+    {
+      "folder": "ReciprocityTheory.Chebotarev",
+      "modules": 47,
+      "lines": 4429
+    },
+    {
+      "folder": "Development.AutomorphicArithmetic.AutomorphicVarieties.GaloisLibrary.BernoulliNumbers",
+      "modules": 38,
+      "lines": 1655
+    },
+    {
+      "folder": "Formalism.SubspaceCounting",
+      "modules": 32,
+      "lines": 7101
+    },
+    {
+      "folder": "Formalism.LogVandermondeBounds",
+      "modules": 26,
+      "lines": 4021
+    },
+    {
+      "folder": "Formalism.LocalToGlobal.TorsionIntegrality.UniformGaussModels.OrthogonalGaussModels.HermitianBlockFrames",
+      "modules": 24,
+      "lines": 2846
+    },
+    {
+      "folder": "Formalism.SharpRestriction.ValuationFrobeniusEpsilon.LeastPrimeTwists.QuotientShiftIrreducible",
+      "modules": 23,
+      "lines": 4111
+    },
+    {
+      "folder": "Development.AutomorphicArithmetic.IntegralCasts.CrystallinePeriods",
+      "modules": 21,
+      "lines": 6003
+    },
+    {
+      "folder": "Development.ResolutionOfSingularities.Foundations",
+      "modules": 20,
+      "lines": 4832
+    },
+    {
+      "folder": "Formalism.LatticeSlopes",
+      "modules": 18,
+      "lines": 1995
+    }
+  ]
+}
