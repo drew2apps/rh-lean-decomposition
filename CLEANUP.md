@@ -11,12 +11,21 @@ Every figure is a count over text, not a kernel-level fact. The removals in the 
 | What | Count | Lines | Basis |
 |---|---:|---:|---|
 | Theorems never referenced by name | 40,347 | 483,146 | Text search over the whole tree, iterated; build-tested on a sample |
+| … of which confirmed unused by the kernel-level data | 40,338 | 482,683 | Cross-check against rh-proof-dependencies v0.1 |
 | Imports already implied by another import in the same file | 367,050 of 753,261 (48.7%) | 367,050 | Imports are transitive here: no file uses the module system |
 | `example` blocks | 4,659 | 17,466 | An `example` adds nothing to the environment |
 | Repeated import lines | 308 | 308 | Exact repeats within one file |
-| **Total** | | **867,970** (4.9% of 17,549,402 lines) | |
+| **Total**, leaving out the 9 theorems the cross-check found to be used | | **867,507** (4.9% of 17,549,402 lines) | |
 
 After removing unreferenced theorems, 2,078 modules contain nothing that is referenced at all (58,137 lines of declarations). They are listed in `hollow_modules.csv`.
+
+## Cross-check against the kernel-level data
+
+Each of the 40,347 unreferenced theorems was looked up in the per-declaration table published with rh-proof-dependencies (release v0.1), which records whether the kernel proof terms of the main theorems reach a declaration. 40,338 are unused there as well; 9 are used and are listed in `kernel_used_exceptions.csv` (`apply_cleanup.py` skips them); 0 could not be matched.
+
+So 40,338 theorems are both outside the proof's dependency closure and never mentioned by name anywhere in the source. That is a subset of the 170,724 theorems and lemmas the kernel-level data marks unused: the ones no source text refers to by name.
+
+The same table says that of the 6,393 exact copies whose twin is already imported, 4,827 are themselves used by the proof.
 
 ## Duplication
 
@@ -76,6 +85,7 @@ Self-contained folders were chosen because they can be built alone. The test sho
 | `in_scope_duplicates_full.csv.gz, in_scope_duplicates_stmt.csv.gz` | Copies whose twin is already imported, with the twin |
 | `duplicate_modules.csv, duplicate_folder_pairs.csv` | Copied modules and folder overlaps |
 | `mathlib_statement_matches.csv` | The few text-identical Mathlib statements |
+| `kernel_crosscheck.json, kernel_used_exceptions.csv` | Cross-check against the kernel-level usage data |
 | `validation.json` | Build test inputs and result |
 
 ## Reproduce

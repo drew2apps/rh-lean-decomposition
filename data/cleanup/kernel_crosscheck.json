@@ -1,0 +1,12 @@
+{
+  "source": "james-shore/rh-proof-dependencies release v0.1, decls.csv.gz (column in_cone)",
+  "matching": "same module, overlapping line range, same final name component",
+  "text_unreferenced_theorems": 40347,
+  "unused_per_kernel_closure": 40338,
+  "unused_lines": 482683,
+  "used_per_kernel_closure": 9,
+  "used_lines": 463,
+  "not_matched": 0,
+  "kernel_unused_theorems_and_lemmas_total": 170724,
+  "in_scope_exact_copies": {"used_per_kernel_closure": 4827, "unused_per_kernel_closure": 1562, "not_matched": 4}
+}

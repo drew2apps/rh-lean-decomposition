@@ -1,0 +1,10 @@
+module,name,start_line,end_line,lines
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutCptManual,glGramCpt,486,547,62
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.GT.top_level_fibreCpt,417,437,21
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.low_level_germCpt,515,563,49
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.germDataLowAll_of_partsCpt,574,729,156
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.low_level_continuityCpt,738,752,15
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.GT.germDataTopAll_of_partsCpt,763,905,143
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.germ_data_top_levelCpt,912,914,3
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.block_growth_bound_of_germ_dataCpt,921,928,8
+Formalism.HermitianCurvature.HermitianCurvatureProofs.CutMainCpt,_root_.Formalism.FourierDecayAlt.P.CutBP.block_growth_bound_of_compact_coef_of_germ_dataCpt,935,940,6

@@ -13,9 +13,13 @@ src, cdir, out, prefixes = sys.argv[1].rstrip('/'), sys.argv[2], sys.argv[3], sy
 want = lambda m: any(m == p or m.startswith(p + '.') for p in prefixes)
 ranges = collections.defaultdict(list); red = collections.defaultdict(set)
 stats = collections.Counter()
+skip = set()                                    # theorems the kernel-level cross-check found to be used
+exc = os.path.join(cdir, 'kernel_used_exceptions.csv')
+if os.path.exists(exc):
+    skip = {(r['module'], r['start_line']) for r in csv.DictReader(open(exc))}
 for name, kind in (('examples.csv.gz', 'examples'), ('unreferenced_theorems.csv.gz', 'theorems')):
     for r in csv.DictReader(gzip.open(os.path.join(cdir, name), 'rt')):
-        if want(r['module']):
+        if want(r['module']) and (r['module'], r['start_line']) not in skip:
             ranges[r['module']].append((int(r['start_line']), int(r['end_line']), kind))
 for r in csv.DictReader(gzip.open(os.path.join(cdir, 'redundant_imports.csv.gz'), 'rt')):
     if want(r['module']):

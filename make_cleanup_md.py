@@ -6,6 +6,7 @@ S = json.load(open(f'{d}/cleanup_summary.json'))
 I = json.load(open(f'{d}/in_scope_summary.json'))
 X = json.load(open(f'{d}/in_scope_context.json'))
 V = json.load(open(f'{d}/validation.json')) if os.path.exists(f'{d}/validation.json') else None
+K = json.load(open(f'{d}/kernel_crosscheck.json'))
 n = lambda x: f'{x:,}'
 T = S['totals']; R = S['removable_without_touching_any_used_declaration']; U = S['unreferenced_theorems']
 E = S['examples']; IM = S['imports']; F = S['identical_statement_and_proof']; ST = S['identical_statement_any_proof']
@@ -30,12 +31,24 @@ w('Every figure is a count over text, not a kernel-level fact. The removals in t
 w('## Removable without touching anything that is used\n')
 w('| What | Count | Lines | Basis |\n|---|---:|---:|---|')
 w(f'| Theorems never referenced by name | {n(U["count"])} | {n(U["lines"])} | Text search over the whole tree, iterated; build-tested on a sample |')
+w(f'| … of which confirmed unused by the kernel-level data | {n(K["unused_per_kernel_closure"])} | {n(K["unused_lines"])} | Cross-check against rh-proof-dependencies v0.1 |')
 w(f'| Imports already implied by another import in the same file | {n(IM["implied_by_another_import"])} of {n(IM["project_import_edges"])} ({pct(IM["implied_by_another_import"], IM["project_import_edges"])}) | {n(IM["implied_by_another_import"])} | Imports are transitive here: no file uses the module system |')
 w(f'| `example` blocks | {n(E["count"])} | {n(E["lines"])} | An `example` adds nothing to the environment |')
 w(f'| Repeated import lines | {n(R["repeated_import_lines"])} | {n(R["repeated_import_lines"])} | Exact repeats within one file |')
-w(f'| **Total** | | **{n(R["total_lines"])}** ({pct(R["total_lines"], T["lines"])} of {n(T["lines"])} lines) | |\n')
+TOT = R["total_lines"] - K["used_lines"]
+w(f'| **Total**, leaving out the {K["used_per_kernel_closure"]} theorems the cross-check found to be used | | **{n(TOT)}** ({pct(TOT, T["lines"])} of {n(T["lines"])} lines) | |\n')
 w(f'After removing unreferenced theorems, {n(H["count"])} modules contain nothing that is referenced at all '
   f'({n(H["lines"])} lines of declarations). They are listed in `hollow_modules.csv`.\n')
+w('## Cross-check against the kernel-level data\n')
+w(f'Each of the {n(K["text_unreferenced_theorems"])} unreferenced theorems was looked up in the per-declaration table published with '
+  f'rh-proof-dependencies (release v0.1), which records whether the kernel proof terms of the main theorems reach a declaration. '
+  f'{n(K["unused_per_kernel_closure"])} are unused there as well; {K["used_per_kernel_closure"]} are used and are listed in '
+  f'`kernel_used_exceptions.csv` (`apply_cleanup.py` skips them); {K["not_matched"]} could not be matched.\n')
+w(f'So {n(K["unused_per_kernel_closure"])} theorems are both outside the proof\'s dependency closure and never mentioned by name '
+  f'anywhere in the source. That is a subset of the {n(K["kernel_unused_theorems_and_lemmas_total"])} theorems and lemmas the kernel-level '
+  'data marks unused: the ones no source text refers to by name.\n')
+w(f'The same table says that of the {n(I["identical_statement_and_proof"]["copies_with_twin_already_in_scope"])} exact copies whose twin '
+  f'is already imported, {n(K["in_scope_exact_copies"]["used_per_kernel_closure"])} are themselves used by the proof.\n')
 w('## Duplication\n')
 w('| What | Declarations | Lines |\n|---|---:|---:|')
 w(f'| Exact copies: identical statement and proof text, name aside | {n(F["redundant_copies"])} redundant copies in {n(F["groups"])} groups | {n(F["redundant_lines"])} |')
@@ -93,6 +106,7 @@ for f, c in (('cleanup_summary.json, in_scope_summary.json, in_scope_context.jso
              ('in_scope_duplicates_full.csv.gz, in_scope_duplicates_stmt.csv.gz', 'Copies whose twin is already imported, with the twin'),
              ('duplicate_modules.csv, duplicate_folder_pairs.csv', 'Copied modules and folder overlaps'),
              ('mathlib_statement_matches.csv', 'The few text-identical Mathlib statements'),
+             ('kernel_crosscheck.json, kernel_used_exceptions.csv', 'Cross-check against the kernel-level usage data'),
              ('validation.json', 'Build test inputs and result')):
     w(f'| `{f}` | {c} |')
 w('\n## Reproduce\n')

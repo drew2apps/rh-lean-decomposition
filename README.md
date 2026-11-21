@@ -94,7 +94,8 @@ from a compiled environment or the kernel export.
 
 [CLEANUP.md](CLEANUP.md) measures what could be removed or merged, from the source text of all 1,063,626 top-level declarations:
 
-- **867,970 lines (4.9%) are removable without touching anything that is used**: 40,347 theorems never referenced by name, 367,050 imports already implied by another import in the same file, and 4,659 `example` blocks.
+- **40,338 of the unreferenced theorems are also unused per the kernel-level data** in [rh-proof-dependencies](https://github.com/james-shore/rh-proof-dependencies), so they sit outside the proof and are never mentioned by name.
+- **867,507 lines (4.9%) look removable without touching anything that is used**: 40,338 such theorems, 367,050 imports already implied by another import in the same file, and 4,659 `example` blocks.
 - **30,395 declarations are exact copies of another one** (235,097 lines). For 6,393 of them the identical twin is already imported at that point.
 - The removals were applied to 170 modules in a scratch copy and built with the pinned toolchain: 170 compiled, 0 errors.
 
