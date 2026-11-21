@@ -97,7 +97,7 @@ from a compiled environment or the kernel export.
 - **40,338 of the unreferenced theorems are also unused per the kernel-level data** in [rh-proof-dependencies](https://github.com/james-shore/rh-proof-dependencies), so they sit outside the proof and are never mentioned by name.
 - **867,507 lines (4.9%) look removable without touching anything that is used**: 40,338 such theorems, 367,050 imports already implied by another import in the same file, and 4,659 `example` blocks.
 - **30,395 declarations are exact copies of another one** (235,097 lines). For 6,393 of them the identical twin is already imported at that point.
-- The removals were applied to 170 modules in a scratch copy and built with the pinned toolchain: 170 compiled, 0 errors.
+- The removals were applied to 470 modules in a scratch copy and built with the pinned toolchain: 470 compiled, 0 errors.
 
 These are text-level counts and lower bounds; CLEANUP.md states what each one does and does not establish.
 

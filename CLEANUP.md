@@ -54,12 +54,12 @@ Whole folders are near-copies of each other. The three largest overlaps:
 
 ## Build test
 
-The removals from the first table were applied to 170 modules in 6 self-contained folders (scratch copy; the original tree is untouched) and built with Lean 4.33.1 on aarch64-unknown-linux-gnu:
+The removals from the first table were applied to 470 modules in 22 self-contained folders (scratch copy; the original tree is untouched) and built with Lean 4.33.1 on aarch64-unknown-linux-gnu:
 
-- removed: 333 unreferenced theorems, 14 `example` blocks, 22 implied imports, in 82 changed modules (30,057 lines down to 25,923);
-- result: 170 of 170 modules compiled, 0 errors, `lake build` exit 0.
+- removed: 399 unreferenced theorems, 36 `example` blocks, 141 implied imports, in 161 changed modules (65,416 lines down to 60,363);
+- result: 470 of 470 modules compiled, 0 errors, `lake build` exit 0.
 
-A second batch of 300 modules in the remaining 16 self-contained folders was still building when this was written.
+These are all 22 maximal self-contained folders of 10 or more modules.
 
 Self-contained folders were chosen because they can be built alone. The test shows the removals leave those folders compiling. It cannot show that no module elsewhere needs a removed theorem; that rests on the text search.
 
