@@ -19,6 +19,12 @@ w('# Cleanup ledger\n')
 w('What could be removed or merged in the release, measured from the source text of all '
   f'{n(S["totals"]["declarations"])} top-level declarations. Dead code and internal duplication were on Kim Morrison\'s '
   'list of likely problems in the Lean Zulip thread; this is a first measurement of both.\n')
+w('> **Exact counts exist.** James Shore\'s [rh-proof-dependencies](https://github.com/james-shore/rh-proof-dependencies) '
+  'measures unused and duplicate declarations from the kernel proof terms (256,620 of 1,061,531 declarations unused; 167,256 '
+  'theorems sharing a statement with another). Use it for totals. It notes two limits: unused is not the same as deletable, '
+  'and duplicates can only be merged where the kept copy is visible and importable. This page gives text-level evidence on '
+  'those two points: a conservative subset whose removal was compiled on a sample, and counts of copies whose twin is '
+  'already imported.\n')
 w('Every figure is a count over text, not a kernel-level fact. The removals in the first table were also applied to a '
   'sample of modules and compiled with the pinned toolchain (see "Build test").\n')
 w('## Removable without touching anything that is used\n')
