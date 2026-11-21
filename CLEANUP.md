@@ -1,6 +1,6 @@
 # Cleanup ledger
 
-What could be removed or merged in the release, measured from the source text of all 1,063,626 top-level declarations. Dead code and internal duplication were on Kim Morrison's list of likely problems in the Lean Zulip thread; this is a first measurement of both.
+What could be removed or merged in the release, measured from the source text of all 1,063,626 top-level declarations. Dead code and internal duplication were on Kim Morrison's list of likely problems in the Lean Zulip thread; this page measures both from the source text.
 
 > **Exact counts exist.** James Shore's [rh-proof-dependencies](https://github.com/james-shore/rh-proof-dependencies) measures unused and duplicate declarations from the kernel proof terms (256,620 of 1,061,531 declarations unused; 167,256 theorems sharing a statement with another). Use it for totals. It notes two limits: unused is not the same as deletable, and duplicates can only be merged where the kept copy is visible and importable. This page gives text-level evidence on those two points: a conservative subset whose removal was compiled on a sample, and counts of copies whose twin is already imported.
 
